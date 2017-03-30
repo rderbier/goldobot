@@ -1,0 +1,77 @@
+
+
+
+<!-- /.section -->
+
+<div  ng-if="userinfo.login==false">
+    <div class="section-colored text-center">
+
+        <div class="container">
+
+            <div class="row">
+               
+                    <h2>Automate tedious tasks with Goldobot</h2>
+                    <p>Simply converse with him. He can help you getting things done ...</p>
+                    <hr>
+                
+            </div>
+            <!-- /.row -->
+
+       <div class="row">
+        <form action="/login" class="navbar-form " method="post">
+            <div class="form-group">
+              <input type="text" placeholder="Email" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" name="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+            
+                        <button ng-click="register()" class="btn btn-primary">Register</buton>
+                    
+        </form>
+        </div>
+        <div class="row">
+        <p>or</p>
+        <a class="google-sso-cta" href="/auth/google" >
+                  <span class="google-logo"></span>
+                  Sign in with Google  </a>
+
+         </div>
+         </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.section-colored -->
+
+    <!-- /.section-colored -->
+
+    <div class="section">
+
+        <div class="container">
+
+            <div class="row">
+                
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <h4>What Goldobot can do for you : </h4>
+                    <ul>
+                        <li>Manage your reminders and todo list</li>
+                        <li>Send tasks to members of your different groups</li>
+                        <li>Send a task when another one is done</li>
+                        <li>... and many more to come</li>
+                        
+                    </ul>
+                </div>
+ 
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+</div>
+<div ng-include='"partials/command.html"' ng-if="userinfo.login==true"></div>
+<!-- /.section -->
+
+

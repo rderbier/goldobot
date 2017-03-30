@@ -1,0 +1,80 @@
+
+
+<!-- Menu when not loged in = login form -->
+
+<nav ng-if="userinfo.login==true" class="navbar navbar-inverse navbar-fixed-top custom-navbar" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+        <!--
+            <button type="button" class="navbar-toggle" ng-click="isNav2Collapsed = !isNav2Collapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            -->
+            
+ 
+            <div class="messagebox">
+                <div  class="microphone">
+                <span class="fa-stack fa-lg">
+                       
+                        <i class="fa fa-television fa-stack-1x"></i>
+                </span>
+                
+                </div>
+                
+                    
+                    <div class="form-group large-control">
+                        
+                        <!-- BIND THIS VALUE TO fcommand IN ANGULAR -->
+                        <div class="message">
+                        {{alert.msg}}</div>
+                        
+                        
+                    </div>
+                           <ul class="action">
+            <li ng-repeat="m in menu">
+
+            <a ng-if="m.action!=undefined" href="" class="fa {{m.fa}}" title="{{m.label}}" ng-click="launchMenu(m)" ></a>
+            <a ng-if="m.action==undefined" href="{{m.href}}" class="fa {{m.fa}}" title="{{m.label}} " ></a>
+            </li>
+            
+        </ul>
+                    
+                  </div> 
+            
+              <form class="form-inline">
+                <div  ng-click="startDictation()" class="text-center microphone">
+                <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-microphone fa-stack-1x"></i>
+                </span>
+                
+                </div>
+                
+                    
+                    <div class="form-group large-control">
+                        
+                        <!-- BIND THIS VALUE TO fcommand IN ANGULAR -->
+                        <input type="text" class="form-control " id="transcript" ng-model="command"  >
+                        
+                        
+                    </div>
+                    <button type="submit" class="btn btn-primary" ng-click="sendCommand(command)">Try</button>
+
+                  </form> 
+                
+            
+        
+          <!-- Non-collapsing right-side icons -->
+                  <!-- Non-collapsing right-side icons -->
+ 
+          
+
+   
+    </div>
+    <!-- /.container -->
+</nav>
+
+      

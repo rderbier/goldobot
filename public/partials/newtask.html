@@ -1,0 +1,31 @@
+    <div class="container"  >
+      
+   
+
+        
+        <div  id="newTaskForm" >
+        
+        <div class="well">
+        <form ng-if="formphase=='type'" name="taskFormNew" sf-schema="taskSchema" sf-form="taskFormType" sf-model="newTask" ></form>
+        <form ng-if="formphase=='reminder'" name="taskFormNew" sf-schema="taskSchema" sf-form="taskFormReminder" sf-model="newTask" ng-submit="addTask(newTask,taskFormNew)"></form>
+        <form ng-if="formphase=='title'" name="taskFormNew" sf-schema="taskSchema" sf-form="taskFormTitle" sf-model="newTask" ng-submit="addTask(newTask,taskFormNew)"></form>
+
+
+
+         <form ng-if="formphase=='topic'"  name="taskFormNew" sf-schema="taskSchema" sf-form="taskFormTopic" sf-model="newTask" ng-submit="addTask(newTask,taskFormNew)"></form>
+
+
+         <form ng-if="formphase=='when'"  name="taskFormNew" sf-schema="taskSchema" sf-form="taskFormWhen" sf-model="newTask" ng-submit="addTask(newTask,taskFormNew)"></form>
+
+         <form ng-if="formphase=='execgroup'"  name="taskFormNew" sf-schema="taskSchema" sf-form="taskFormExecGroup" sf-model="newTask" ng-submit="addTask(newTask,taskFormNew)"></form>
+
+         <form ng-if="formphase=='atwill'"  name="taskFormNew" sf-schema="taskSchema" sf-form="taskFormAtwill" sf-model="newTask" ng-submit="addTask(newTask,taskFormNew)"></form>
+
+          <form ng-if="formphase=='chained'"  name="taskFormNew" sf-schema="taskSchema" sf-form="taskFormChained" sf-model="newTask" ng-submit="addTask(newTask,taskFormNew)"></form>
+
+          <form ng-if="formphase=='goal'"  name="taskFormGoal" sf-schema="taskSchema" sf-form="taskFormGoalPart1" sf-model="newTask" ng-submit="createFlow(newTask,taskFormNew)"></form>
+
+        </div>
+        <h3>{{newTask.explanation}}</h3>
+        </div>
+     </div>
